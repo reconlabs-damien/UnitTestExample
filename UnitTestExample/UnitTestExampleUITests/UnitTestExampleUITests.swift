@@ -26,7 +26,32 @@ final class UnitTestExampleUITests: XCTestCase {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
-
+        
+        let title = app.staticTexts["Log In"]
+        XCTAssertTrue(title.exists)
+        
+        let usernameField = app.textFields["Username"]
+        XCTAssertTrue(usernameField.exists)
+        
+        usernameField.tap()
+        usernameField.typeText("afraz")
+        
+        
+        let passwordSecureTextField = app.secureTextFields["Password"]
+        XCTAssertTrue(passwordSecureTextField.exists)
+        
+        passwordSecureTextField.tap()
+        passwordSecureTextField.typeText("password")
+        
+        let button = app.buttons["Continue"]
+        XCTAssertTrue(button.exists)
+        
+        button.tap()
+        
+        let accountLabel = app.staticTexts["Welcome, Afraz!"]
+        XCTAssertTrue(accountLabel.exists)
+        
+        
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
