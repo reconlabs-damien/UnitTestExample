@@ -46,7 +46,7 @@ class BullsEyeGame {
   }
 
   func getRandomNumber(completion: @escaping (Int) -> Void) {
-    guard let url = URL(string: "http://www.randomnumberapi.com/api/v1.0/random?min=0&max=100&count=1") else {
+    guard let url = URL(string: "https://www.randomnumberapi.com/api/v1.0/random?min=0&max=100&count=1") else {
       return
     }
     let task = urlSession.dataTask(with: url) { data, _, error in

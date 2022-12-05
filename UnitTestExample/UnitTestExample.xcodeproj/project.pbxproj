@@ -12,13 +12,13 @@
 		37FCA87AE3632F940311D084 /* Pods_UnitTestExample_UnitTestExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54FA544260E71B41DBCA0788 /* Pods_UnitTestExample_UnitTestExampleUITests.framework */; };
 		BF141C5E292754230098B91A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF141C5D292754230098B91A /* AppDelegate.swift */; };
 		BF141C60292754230098B91A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF141C5F292754230098B91A /* SceneDelegate.swift */; };
-		BF141C62292754230098B91A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF141C61292754230098B91A /* ViewController.swift */; };
 		BF141C65292754230098B91A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF141C63292754230098B91A /* Main.storyboard */; };
 		BF141C67292754240098B91A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF141C66292754240098B91A /* Assets.xcassets */; };
 		BF141C6A292754240098B91A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF141C68292754240098B91A /* LaunchScreen.storyboard */; };
 		BF141C75292754250098B91A /* UnitTestExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF141C74292754250098B91A /* UnitTestExampleTests.swift */; };
 		BF141C7F292754250098B91A /* UnitTestExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF141C7E292754250098B91A /* UnitTestExampleUITests.swift */; };
 		BF141C81292754250098B91A /* UnitTestExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF141C80292754250098B91A /* UnitTestExampleUITestsLaunchTests.swift */; };
+		BF45D295293D8CA800EDEDE8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF45D294293D8CA800EDEDE8 /* ViewController.swift */; };
 		BF991524292C8D4600544BC6 /* BullsEyeGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF991523292C8D4600544BC6 /* BullsEyeGame.swift */; };
 		BFF0CA4A292DD5780019EE3D /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF0CA49292DD5780019EE3D /* NetworkMonitor.swift */; };
 		BFF0CA4C292DD6930019EE3D /* URLSessionStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF0CA4B292DD6930019EE3D /* URLSessionStub.swift */; };
@@ -54,7 +54,6 @@
 		BF141C5A292754230098B91A /* UnitTestExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnitTestExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF141C5D292754230098B91A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF141C5F292754230098B91A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BF141C61292754230098B91A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BF141C64292754230098B91A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF141C66292754240098B91A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF141C69292754240098B91A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,6 +63,7 @@
 		BF141C7A292754250098B91A /* UnitTestExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTestExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF141C7E292754250098B91A /* UnitTestExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestExampleUITests.swift; sourceTree = "<group>"; };
 		BF141C80292754250098B91A /* UnitTestExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BF45D294293D8CA800EDEDE8 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BF991523292C8D4600544BC6 /* BullsEyeGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullsEyeGame.swift; sourceTree = "<group>"; };
 		BFF0CA49292DD5780019EE3D /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		BFF0CA4B292DD6930019EE3D /* URLSessionStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionStub.swift; sourceTree = "<group>"; };
@@ -148,8 +148,8 @@
 			children = (
 				BF991523292C8D4600544BC6 /* BullsEyeGame.swift */,
 				BF141C5D292754230098B91A /* AppDelegate.swift */,
+				BF45D294293D8CA800EDEDE8 /* ViewController.swift */,
 				BF141C5F292754230098B91A /* SceneDelegate.swift */,
-				BF141C61292754230098B91A /* ViewController.swift */,
 				BF141C63292754230098B91A /* Main.storyboard */,
 				BF141C66292754240098B91A /* Assets.xcassets */,
 				BF141C68292754240098B91A /* LaunchScreen.storyboard */,
@@ -423,8 +423,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF45D295293D8CA800EDEDE8 /* ViewController.swift in Sources */,
 				BF991524292C8D4600544BC6 /* BullsEyeGame.swift in Sources */,
-				BF141C62292754230098B91A /* ViewController.swift in Sources */,
 				BFF0CA4C292DD6930019EE3D /* URLSessionStub.swift in Sources */,
 				BFF0CA4A292DD5780019EE3D /* NetworkMonitor.swift in Sources */,
 				BF141C5E292754230098B91A /* AppDelegate.swift in Sources */,
