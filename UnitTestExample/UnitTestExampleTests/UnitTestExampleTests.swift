@@ -10,26 +10,49 @@ import XCTest
 
 final class UnitTestExampleTests: XCTestCase {
 
+    var sut: BullsEyeGame!
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        
+        try super.setUpWithError()
+        sut = BullsEyeGame()
+        
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        sut = nil
+        try super.tearDownWithError()
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func testScoreIsComputedWhenGuessIsLowerThanTarget() {
+        
+        let guess = sut.targetValue - 5
+        
+        sut.check(guess: guess)
+        
+        XCTAssertEqual(sut.scoreRound, 105, "guess로 계산된 점수가 잘못되었습니다.")
+        
+    }
+    
+    func testScoreIsComputedWhenGuessIsHigherThanTarget() {
+        
+        // 1. given
+        let guess = sut.targetValue + 5
+        
+        // 2. when
+        sut.check(guess: guess)
+        
+        // 3. then
+        XCTAssertEqual(sut.scoreRound, 95, "계산된 점수가 잘못되었습니다.")
+        
     }
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        self.measure(metrics: [XCTClockMetric(), XCTCPUMetric(), XCTStorageMetric(), XCTMemoryMetric()]){
+            
+            sut.check(guess: 100)
+            
         }
     }
 
