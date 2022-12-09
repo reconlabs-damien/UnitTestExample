@@ -27,9 +27,7 @@ final class UnitTestExampleTests: XCTestCase {
     func testScoreIsComputedWhenGuessIsLowerThanTarget() {
         
         let guess = sut.targetValue - 5
-        
         sut.check(guess: guess)
-        
         XCTAssertEqual(sut.scoreRound, 105, "guess로 계산된 점수가 잘못되었습니다.")
         
     }
@@ -47,7 +45,9 @@ final class UnitTestExampleTests: XCTestCase {
         
     }
 
+    
     func testPerformanceExample() throws {
+        
         // This is an example of a performance test case.
         self.measure(metrics: [XCTClockMetric(), XCTCPUMetric(), XCTStorageMetric(), XCTMemoryMetric()]){
             
