@@ -9,7 +9,7 @@ import XCTest
 @testable import UnitTestExample
 
 final class UnitTestExampleTests: XCTestCase {
-
+    
     var sut: BullsEyeGame!
     
     override func setUpWithError() throws {
@@ -18,17 +18,24 @@ final class UnitTestExampleTests: XCTestCase {
         sut = BullsEyeGame()
         
     }
-
+    
     override func tearDownWithError() throws {
+        
         sut = nil
         try super.tearDownWithError()
+        
     }
-
+    
     func testScoreIsComputedWhenGuessIsLowerThanTarget() {
         
+        // 1. given
         let guess = sut.targetValue - 5
+        
+        // 2. when
         sut.check(guess: guess)
-        XCTAssertEqual(sut.scoreRound, 105, "guess로 계산된 점수가 잘못되었습니다.")
+        
+        // 3. then
+        XCTAssertEqual(sut.scoreRound, 95, "guess로 계산된 점수가 잘못되었습니다.")
         
     }
     
